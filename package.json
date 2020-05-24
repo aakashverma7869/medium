@@ -1,0 +1,34 @@
+{
+  "name": "css",
+  "version": "1.0.0",
+  "description": "## This is the wiki file to read about the tasks",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon app",
+    "index": "sass --watch src/client/assets/scss/style.scss src/client/assets/css/style.css & node src/app",
+    "doctor": "sass --watch src/client/assets/scss/newdoctor.scss src/client/assets/css/doctor.css & node src/app",
+    "hospital": "sass --watch src/client/assets/scss/hospital.scss src/client/assets/css/hospital.css & node src/app",
+    "login": "sass --watch src/client/assets/scss/login.scss src/client/assets/css/login.css & node src/app",
+    "signup": "sass --watch src/client/assets/scss/login.scss src/client/assets/css/login.css & node src/app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@workspace.konfinity.com:html-css/css.git"
+  },
+  "author": "Aakash verma",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "compression": "^1.7.4",
+    "dotenv": "^8.2.0",
+    "mongoose": "^5.9.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "google-spreadsheet": "^3.0.8",
+    "lite-server": "^2.5.4",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.2"
+  }
+}
