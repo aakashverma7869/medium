@@ -17,6 +17,8 @@
     color: #070f35;
     padding: 1rem;
     }
+
+
     .SearchClass > .div > .flex-container{
     display: flex;
     height: 2.6rem;
@@ -89,13 +91,12 @@
     .SearchClass{
     text-align: left;
     padding: 4rem; 
-    padding-right: 1rem;
+   
     }
+
     .SearchClass > p{
     width: 55%;
     }
-
-
     }
     
     .FacilityClass{
@@ -143,7 +144,12 @@
     box-shadow: 0 0 2rem lightgrey;
     /* border-color:darkblue; */
     }
- 
+    .FacilityClass > .btn>span>h2:hover{
+    /* color:skyblue ;  */
+    }
+    .FacilityClass > .btn>h2:hover{
+    /* color: #021433; */
+    }
     
     .FacilityClass >.div-gridBox >.div-4img{
     max-width: 450px;
@@ -791,7 +797,7 @@
     }
     .ServiceClass>.cards
     {
-    max-width: 74rem;
+    max-width: 75rem;
     display:flex;
     margin-left: 2rem;
     justify-content: flex-start;

@@ -3,23 +3,25 @@ const router = express.Router();
 const controller = require("../controllers")
 const getControllers = controller.get
 const postControllers = controller.post
-// const postController = require("../controllers/postController");
-// router.route("/").get(getControllers.index);
-// router.route("/login").post(postControllers.index);
-// router.route("/").get(getControllers.login);
+
+
+//Get Controller
 router.route("/").get(getControllers.login);
-router.route("/login").post(postControllers.login);
+router.route("/signup").get(getControllers.signup);
+router.route("/phonenumber").get(getControllers.phonenumber);
+router.route("/logout").get(getControllers.logout);
+router.route("/editProfile").get(getControllers.editProfile);
+router.route("/AddSchedule").get(getControllers.AddSchedule);
+router.route("/travastraPlus").get(getControllers.travastraPlus);
+router.route("/index").get(getControllers.index);
 
+//POST Controller
+router.route("/indexPage").post(postControllers.indexPage);
+router.route("/signUpUser").post(postControllers.signUpUser);
+router.route("/otp").post(postControllers.otp);
+router.route("/check").post(postControllers.check);
+router.route("/updateUserData").post(postControllers.updateUserData);
+router.route("/docSignUp").post(postControllers.docSignUp);
+router.route("/addschedule").post(postControllers.addschedule);
 
-
-
-
-
-
-// router.route("/Doctors").get(getController.doctor);
-// router.route("/Hospitals").get(getController.hospitals);
-// router.route("/getlocation/:pincode").get(getController.pincodeQuery);
-// router.route("/search").post(postController.search);
-// router.route("/login").get(getController.login);
-// router.route("/signup").get(getController.signup);
 module.exports = router;

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Document</title>
 
-<!-- <link rel="stylesheet" type="text/css" href="./styles/.css"> -->
+<link rel="stylesheet" type="text/css" href="reset.css">
 <link rel="stylesheet" type="text/css" href="theme.css">
 <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
@@ -26,34 +26,19 @@
 <p>About</p>
 </div>
 <div class = 'nav-classButton'>
-<button onclick="window.location.href='/travastraPlus'" class='nav-button-white'>Travastra Plus</button>
+<button class='nav-button-white'>Login / Sign Up</button>
 <button class='nav-button'>Get a Quote</button>
 
-<div class="dropdown">
-    <button class="dropbtn"><%= userName %></button>
-    <div class="dropdown-content">
-    <a href="/editProfile"><%= userName %><br>Mob:-<%= userPhone %></a>    
-    <a href="#">My Appointment</a>
-    <a href="#">My Lab Tests</a>
-    <a href="#">My Medicine Orders</a>
-    <a href="#">My Payments</a>
-    <a href="/logout">Logout</a>
-    </div>
-  </div>
+
 </div>
 <i class="fas fa-bars" onclick="ALERTFunction()"></i>
 </nav>
 </div>
 
 <!-- <-- START OF TASK 3----- -->
+
 <section class="SearchClass">
-    <% if( status === "Successfully") { %>
-        <div id="alert">
-            <span id="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-            <%= status %> login
-          </div>
-     <% } %>
-            
+ 
 <h1>Find Affordable Healthcare</h1>
 <p>Join the thousands of others who 
 have exercised their rights to quality 

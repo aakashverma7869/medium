@@ -3,14 +3,14 @@ body {
     height: 100%;
    
     display: flex;
-     flex-flow: column;
+    flex-flow: column;
   }
   
   .container-login {
     background: #9cbfda;   
-     display: flex; 
-     justify-content: center;
-    align-items: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1.5rem;
   }
   
@@ -20,9 +20,7 @@ body {
     width: 100%;
     max-width: 500px;
     background: #ffffff;
-    margin-top: 5rem;
-    
-   
+    margin-top: 3rem;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   
@@ -43,7 +41,7 @@ body {
     align-items: center;
     border: 1px solid #999999;
     border-radius: 2px;
-    margin: 1rem;
+    margin-top:1rem ;
   }
   
   .container-login .card-box form .input-class input {
@@ -51,8 +49,9 @@ body {
     padding: 1rem;
     border: none;
     color: #999999;
-    font-family: 'BoldFont';
+    font-family: 'Nexa-Bold';
     font-size: 0.9rem;
+    
   }
   
   .container-login .card-box form .input-class i {
@@ -63,13 +62,17 @@ body {
   }
   
   .container-login .card-box form .button-class {
-    margin: 1rem;
+    /* margin: 1rem; */
+    margin-top: 1rem;
   }
-  
+  .container-login .card-box form .option label
+  {
+    margin-left: 1rem;
+  }
   .container-login .card-box form .button-class button {
     width: 100%;
     padding: 1rem;
-    font-family: 'BoldFont';
+    font-family: 'Nexa-Bold';
     letter-spacing: 5px;
     color: #ffffff;
     background-color: #2a2d3e;
@@ -91,37 +94,16 @@ body {
   }
   
   .container-login .card-box form .end-class p {
-    font-family: 'BoldFont';
+    font-family: 'Nexa-Bold';
     font-size: 0.9rem;
     color: #999999;
   }
   
   .container-login .card-box form .end-class a {
     color: #0173b2;
-    font-family: 'BoldFont';
+    font-family: 'Nexa-Bold';
     font-size: 0.9rem;
     text-decoration: none;
-  }
-  .container-login .card-box form .otp-class {
-  
-    display: flex;
-    flex-direction: row;
-    /* align-items: left; */
-    justify-content: space-between;
-    padding: 1rem;
-    gap: 0.5rem;
-    padding-bottom: 0.3rem;
-    padding-top: 0.3rem;
-  }
-  .container-login .card-box form .otp-class a {
-    color: #0173b2;
-    font-family: 'BoldFont';
-    font-size: 0.9rem;
-    text-decoration: none;
-  }
-  .otp-par
-  {
-    margin-left: 2rem;
   }
   
   .footer {
@@ -132,7 +114,7 @@ body {
   
   .footer p {
     color: #000000;
-    font-family: 'BoldFont';
+    font-family: 'Nexa-Bold';
     font-size: 0.9rem;
   }
   
@@ -141,38 +123,37 @@ body {
       margin-top: auto;
       margin-bottom: auto;
     }
-    .alert-class
-    {
-      background-color: #9cbfda;
-    }
-    #alert
-    {
-      margin-top: 1rem;
-      background-color: red;
-    }
-    .labels
-    {
-        margin-left: 1rem;
-    }
-    .days-class
-    {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        margin-bottom: 1rem;
-    }
-    .days-class >select
-    {
-        width: 100%;
-    }
-    .time-class
-    {
-        display: flex;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        justify-content: space-between;
-    }
-    .time-class > input{
-        width: 48%;
-    }
   }
   
+.inner{
+    margin: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

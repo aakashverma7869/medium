@@ -1,8 +1,10 @@
 const express = require("express");
+const app = express();
+var session = require('express-session')
+//const Nexmo = require('nexmo');
 require('dotenv').config()
 const mongoose = require("mongoose");
 const router = express.Router();
-const app = express();
 const cors = require("cors");
 const compression = require("compression");
 const bodyParser = require("body-parser");
@@ -21,10 +23,7 @@ mongoose.connect(process.env.DATABASE,
     });
 
 
-
-
-
-
+ 
 
 app.use(cookieParser());
 app.use(cors());
@@ -45,7 +44,28 @@ router.route("/").get(home);
 */
 
 
+
+//sesssions
+app.set('trust proxy', 1) // trust first proxy
+app.use(session({
+  name: "sid",
+  secret: "KonfinitySecretKey",
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    sameSite: true
+  }
+}));
+
+
+
+
+
+
+
 app.use("/", mainRoutes);
+
+
 app.set("port", process.env.PORT || 4000);
 app.listen(app.get("port"), () => {
   console.log("Application running in port: " + app.get("port"));

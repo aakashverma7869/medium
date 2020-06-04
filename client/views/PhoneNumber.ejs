@@ -30,42 +30,26 @@
         <i class="fas fa-bars" onclick="ALERTFunction()"></i>
         </nav>
         </div>
-        <div class ="alert-class">
-        <% if( status === "Invalid") { %>
-          <div id="alert">
-              <span id="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-              <%= status %> login
-            </div>
-       <% } %>
-        </div>
         <div class="container-login">
             <div class="card-box">
               <div class="heading">
-                <h1>Login</h1>
+                <h1>Enter the phone number</h1>
               </div>
-              <form action="/indexPage" method="POST">
+              <form action="otp" method="POST">
+                    <!-- <div class = "otp-par">
+                  <p>We have sent OTP to your registered mobile number</p>
+                    </div>
+       -->
                 <div class="input-class">
-                  <input type="tel" placeholder="Enter email " name = "email"/>
-                  <!-- <i class="fa fa-eye" aria-hidden="true"></i> -->
+                  <input type="text" placeholder="Enter the phone number" name ="phone"/>
                 </div>
-      
-                <div class="input-class">
-                  <input type="password" placeholder="Enter password" name = "password" id="myInput" />
-                  <i id = "abc" class="fa fa-eye-slash" aria-hidden="true" onclick="passwordToggle()"></i>
-                  <!-- <i class="fa fa-eye" aria-hidden="true" ></i> -->
-                </div>
+
                 <div class="otp-class">
-                <a href="phonenumber">Login with OTP</a>
-                <a href="phonenumber">Forget password?</a>
+                <a href="/">Login with password?</a>
                 </div>
                 <div class="button-class">
-                  <button>LOGIN <i class="fa fa-arrow-right"></i>
+                  <button>Login <i class="fa fa-arrow-right"></i>
                   </button>
-                </div>
-      
-                <div class="end-class">
-                  <p>Not registered ?</p>
-                  <a href="signup">Sign Up</a>
                 </div>
               </form>
             </div>

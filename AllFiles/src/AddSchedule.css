@@ -8,9 +8,9 @@ body {
   
   .container-login {
     background: #9cbfda;   
-     display: flex; 
-     justify-content: center;
-    align-items: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1.5rem;
   }
   
@@ -20,9 +20,7 @@ body {
     width: 100%;
     max-width: 500px;
     background: #ffffff;
-    margin-top: 5rem;
-    
-   
+    margin-top: 3rem;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   
@@ -42,7 +40,7 @@ body {
     flex-direction: row;
     align-items: center;
     border: 1px solid #999999;
-    border-radius: 2px;
+    /* border-radius: 2px; */
     margin: 1rem;
   }
   
@@ -102,27 +100,6 @@ body {
     font-size: 0.9rem;
     text-decoration: none;
   }
-  .container-login .card-box form .otp-class {
-  
-    display: flex;
-    flex-direction: row;
-    /* align-items: left; */
-    justify-content: space-between;
-    padding: 1rem;
-    gap: 0.5rem;
-    padding-bottom: 0.3rem;
-    padding-top: 0.3rem;
-  }
-  .container-login .card-box form .otp-class a {
-    color: #0173b2;
-    font-family: 'BoldFont';
-    font-size: 0.9rem;
-    text-decoration: none;
-  }
-  .otp-par
-  {
-    margin-left: 2rem;
-  }
   
   .footer {
     padding: 2rem 1rem;
@@ -141,15 +118,7 @@ body {
       margin-top: auto;
       margin-bottom: auto;
     }
-    .alert-class
-    {
-      background-color: #9cbfda;
-    }
-    #alert
-    {
-      margin-top: 1rem;
-      background-color: red;
-    }
+
     .labels
     {
         margin-left: 1rem;

@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" type="text/css" href="theme.css">
-    <link rel="stylesheet" type="text/css" href="Login.css">
+    <link rel="stylesheet" type="text/css" href="signup.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script src="script.js"></script>
 </head>
-
 <body>
     <div class='nav-class'>
         <nav>
@@ -30,34 +28,39 @@
         <i class="fas fa-bars" onclick="ALERTFunction()"></i>
         </nav>
         </div>
-        <div class ="alert-class">
-        <% if( status === "Invalid") { %>
-          <div id="alert">
-              <span id="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-              <%= status %> login
-            </div>
-       <% } %>
-        </div>
         <div class="container-login">
             <div class="card-box">
               <div class="heading">
-                <h1>Login</h1>
+                <h1>Congratulations <%= userName %> </h1>
+                <p>You are one step away to be the part of medical portal</p>
               </div>
-              <form action="/indexPage" method="POST">
-                <div class="input-class">
-                  <input type="tel" placeholder="Enter email " name = "email"/>
-                  <!-- <i class="fa fa-eye" aria-hidden="true"></i> -->
+              <form action="/docSignUp" method="POST">
+                  <div class = "description">
+                    <h2>Description</h2>
+                    <textarea  name="description" rows="8" cols="60" >
+                  
+                    </textarea>
+                  </div>
+                <div class="input-class2">
+                  <input type="txt" name = "speciality" placeholder="Enter speciality"  />
+                  <input type="txt" name = "qualification"  placeholder="Enter qualification"  />
                 </div>
-      
-                <div class="input-class">
-                  <input type="password" placeholder="Enter password" name = "password" id="myInput" />
-                  <i id = "abc" class="fa fa-eye-slash" aria-hidden="true" onclick="passwordToggle()"></i>
-                  <!-- <i class="fa fa-eye" aria-hidden="true" ></i> -->
-                </div>
-                <div class="otp-class">
-                <a href="phonenumber">Login with OTP</a>
-                <a href="phonenumber">Forget password?</a>
-                </div>
+                <div class="input-class2">
+                    <input type="txt"  name = "treatmentList" placeholder="Enter treatmentList"  />
+                    <input type="txt"  name = "location" placeholder="Enter location"  />
+                  </div>
+                  <div class="input-class2">
+                    <input type="txt"  name = "hospital" placeholder="Enter hospital"  />
+                    <input type="txt"  name = "achivements" placeholder="Enter achivements"  />
+                  </div>
+                  <div class="input-class2">
+                    <input type="txt"  name = "awards" placeholder="Enter awards"  />
+                    <input type="txt" name = "experience" placeholder="Enter experience"  />
+                  </div>
+                  <div class="input-class2">
+                    <input type="txt" name = "fees" placeholder="Enter fees"  />
+                    <input type="file" name="photo">
+                  </div>
                 <div class="button-class">
                   <button>LOGIN <i class="fa fa-arrow-right"></i>
                   </button>
@@ -65,7 +68,7 @@
       
                 <div class="end-class">
                   <p>Not registered ?</p>
-                  <a href="signup">Sign Up</a>
+                  <a href="signup.html">Sign Up</a>
                 </div>
               </form>
             </div>

@@ -1,0 +1,97 @@
+h1
+{
+    font-size: 2rem;
+}
+h2
+{
+    font-size: 1.5rem;
+}
+h3{
+    font-size: 0.8rem;
+}
+.main
+{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin: 2rem;
+}
+
+.right-section > .top
+{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: darkblue;
+    border-bottom: groove
+}
+.right-section > .top > button
+{
+    height: 40px;
+    width: 140px;
+    border-radius: 3px;
+    color: white;
+    font-size: 0.8em;
+    background-color: #4797d4;
+    border: 2px solid #4797d4
+}
+.mid
+{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: groove
+}
+.down{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-bottom: groove;
+    padding-bottom: 2rem;
+}
+.down-2{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-bottom: groove;
+    padding-bottom: 2rem;
+}
+.down-3{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-bottom: groove;
+    padding-bottom: 2rem;
+}
+
+.container-login{
+    grid-column-start:2;
+    grid-column-end: 3;
+    grid-row-start: 0;
+    grid-row-end: 1;
+}
+
+.container-login .card-box {
+    margin-top: 0rem;
+    margin-left: 9rem;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.all-ext{
+    grid-column-start:2;
+    grid-column-end: 3;
+    grid-row-start: 0;
+    grid-row-end: 1;
+
+}
+
+
+
+.time-class {
+ 
+    margin-left: 0rem; 
+
+}
+.alertP >#alert {
+    padding: 20px;
+    background-color: green;
+    color: white;
+    width: 17rem;
+    float: right;
+    margin-top: 0rem;
+}
