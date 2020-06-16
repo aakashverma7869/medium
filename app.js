@@ -1,9 +1,10 @@
 const express = require("express");
+
 const app = express();
 var session = require('express-session')
-//const Nexmo = require('nexmo');
+
 require('dotenv').config()
-const mongoose = require("mongoose");
+
 const router = express.Router();
 const cors = require("cors");
 const compression = require("compression");
@@ -16,12 +17,6 @@ const cookieParser = require("cookie-parser");
 
 
 //db connection
-mongoose.connect(process.env.DATABASE,
-    {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true})
-    .then(()=>{
-        console.log("DB CONNECTED................");
-    });
-
 
  
 
