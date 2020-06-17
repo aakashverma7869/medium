@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="theme.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="script.js"></script>
+    
+  
+
+</head>
+
+<body>
+    <div class='nav-class'>
+        <nav>
+          <div class = nav-img>
+        <img class = 'logo' src="https://miro.medium.com/max/3150/1*6_fgYnisCa9V21mymySIvA.png" alt="logo">
+      </div>
+      <div class = "nav-heading">
+        <h1>Medium API</h1>
+      </div>
+        </nav>
+        </div>
+   
+          <form action="/indexPage" method="POST">
+            <h1  id = "heading"> Please write any tag value for search:</h1>
+          <div class = "Search">
+
+      
+            <input type="text" id="fname" name="fname">
+            <button>Search</button>
+          </div>
+        
+        
+       
+
+
+          <div class = "grid">
+
+          <div class="container" id="container" >
+            <h1>Blog Posts</h1>
+      
+            <% for(var i=0;i<stream.length;i++){ %>
+
+            <div class="blog-post">
+                <h2 class="title">Creator Name :- <%=user[refrence[stream[i].postPreview.postId].creatorId].name %></h2>
+                <h2 class="title">POST ID :- <%=stream[i].postPreview.postId %></h2>
+                <h2 class="title">Creator ID :- <%=refrence[stream[i].postPreview.postId].creatorId %></h2>
+               
+     
+                <p class="text">Title :- <%=tag.name %></p>
+                <p class="text">Created at :- <%=refrence[stream[i].postPreview.postId].createdAt %></p>
+                <p class="text">Reading Time :- <%=refrence[stream[i].postPreview.postId].virtuals.readingTime %></p>
+               
+                <div class="user-info">
+                    <img src="https://randomuser.me/api/portraits/women/26.jpg" alt="pic" />
+                   
+                    <span><%=user[refrence[stream[i].postPreview.postId].creatorId].name %></span>
+                </div>
+
+               
+            </div>
+            
+            <% } %>
+      
+            <button id = "nxt">Next</button>
+     
+        </div>
+    
+        <div class = "related">
+            <h1> Related Topics:----</h1>
+
+            <% for(var i=0;i<sucess.length;i++){ %>
+            <button name = "relatedbtn" value="<%= sucess[i].name %>"><%= sucess[i].name %></button>
+            <% } %>
+            </div>
+    </div> 
+</form>
+      
+</body>
+</html>

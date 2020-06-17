@@ -1,12 +1,28 @@
 
+ const fetch = require('node-fetch');
 
+let indexPage  = async (req, res) =>{
+    console.log("hello this is after");
+    const a = req.body;
+    console.log(a);
+    let url = `https://medium.com/_/api/tags/javascript/stream`
+    let content = await fetch(url, {
+        method: "get",
+        headers: {
+          "content-type": "application/json"
+        },
+      });
+      var textContent = await content.text();
+    //   console.log("textContentis -->>",textContent);
+    
+      var objContent = JSON.parse(textContent.slice(16));
+      console.log("objCont------------------->>>>>>>",objContent);
 
-let index = (req, res) => {
-    console.log("Login page redirect")
- 
-    res.render("index");
+      res.render("indexPage",{sucess:0,stream:0,user:0});
+
 }
 
+
 module.exports = {
-    index:index
+    indexPage:indexPage
 }
