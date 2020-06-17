@@ -4,7 +4,7 @@
   "description": "## This is the wiki file to read about the tasks",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon app"
+    "start": "nodemon app"
   },
   "repository": {
     "type": "git",
