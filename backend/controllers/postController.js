@@ -18,15 +18,13 @@ let indexPage  = async (req, res) =>{
     req.session.number = req.session.number+10
 
      }
-    let opts = {
-        limit: req.session.number,
-        sortBy: "recent-vote-count",
-      };
+  
       if(req.body.relatedbtn)
       {
-       
- 
+      
+        req.session.number = 10;
              url = `https://medium.com/_/api/tags/${req.body.relatedbtn}/stream`
+     
            req.session.url = url
         
          console.log("inside the if--aaksaj----------");
@@ -45,7 +43,10 @@ let indexPage  = async (req, res) =>{
 
  
 
-
+    let opts = {
+        limit: req.session.number,
+        sortBy: "recent-vote-count",
+      };
     
     let content = await fetch(url, {
         method: "post",

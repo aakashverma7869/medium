@@ -87,9 +87,16 @@ font-size: 1rem;
 #nxt
 {
   color: #fff;
-    background-color: darkblue;
-    width: 6rem;
-    height: 2.5rem;
-    font-size: 1.2rem
+    background-color:seagreen;
+    width: 4rem;
+    /* height: 2.5rem; */
+    font-size: 1rem
 
+}
+#refresh{
+  float: right;
+    color: white;
+    background: cornflowerblue;
+    height: 2rem;
+    margin-right: 2rem;
 }

@@ -17,3 +17,11 @@ window.addEventListener('scroll', () => {
         alert("you're at the bottom of the page");
     }
 });
+
+ function destroyfunction(){
+     console.log("inside destoyed");
+    req.session.destroy(function(err) {
+        console.log("session is destroyed");
+      })
+
+}

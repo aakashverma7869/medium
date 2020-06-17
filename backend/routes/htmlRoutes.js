@@ -8,6 +8,7 @@ const postControllers = controller.post
 //Get Controller
 router.route("/").get(getControllers.indexPage);
 
+router.route("/refresh").get(getControllers.refresh);
 
 
 //Post Controller

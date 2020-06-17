@@ -21,8 +21,15 @@ let indexPage  = async (req, res) =>{
       res.render("indexPage",{sucess:0,stream:0,user:0});
 
 }
+let refresh = (req,res) =>{
+  req.session.destroy(function(err) {
+    console.log("session is destroyed");
+  })
+  res.render("indexPage",{sucess:0,stream:0,user:0});
 
+}
 
 module.exports = {
-    indexPage:indexPage
+    indexPage:indexPage,
+    refresh:refresh
 }
