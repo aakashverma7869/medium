@@ -56,9 +56,10 @@
                
      
                 <p class="text">Title :- <%=tag.name %></p>
-                <p class="text">Created at :- <%=refrence[stream[i].postPreview.postId].createdAt %></p>
-                <p class="text">Reading Time :- <%=refrence[stream[i].postPreview.postId].virtuals.readingTime %></p>
-               
+                <!-- <p class="text">Created at :- <%=refrence[stream[i].postPreview.postId].createdAt %></p> -->
+                <p class="text">Created at :- <%= Date(parseInt(refrence[stream[i].postPreview.postId].createdAt)) %></p>
+                <!-- <p class="text">Reading Time :- <%=Math.ceil(refrence[stream[i].postPreview.postId].virtuals.readingTime)%></p> -->
+                <p class="text">Reading Time :- <%=Math.floor(refrence[stream[i].postPreview.postId].virtuals.readingTime * 100) / 100 %> min </p>
                 <div class="user-info">
                     <img src="https://randomuser.me/api/portraits/women/26.jpg" alt="pic" />
                    
