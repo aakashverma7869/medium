@@ -4,6 +4,7 @@ const app = express();
 var session = require('express-session')
 
 require('dotenv').config()
+const mongoose = require("mongoose");
 
 const router = express.Router();
 const cors = require("cors");
@@ -17,6 +18,13 @@ const cookieParser = require("cookie-parser");
 
 
 //db connection
+//db connection
+mongoose.connect(process.env.DATABASE,
+  {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true})
+  .then(()=>{
+      console.log("DB CONNECTED................");
+  });
+
 
  
 

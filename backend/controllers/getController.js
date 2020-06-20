@@ -18,14 +18,14 @@ let indexPage  = async (req, res) =>{
       var objContent = JSON.parse(textContent.slice(16));
       console.log("objCont------------------->>>>>>>",objContent);
 
-      res.render("indexPage",{sucess:0,stream:0,user:0});
+      res.render("indexPage",{sucess:0,stream:0,user:0,dbs:0});
 
 }
 let refresh = (req,res) =>{
   req.session.destroy(function(err) {
     console.log("session is destroyed");
   })
-  res.render("indexPage",{sucess:0,stream:0,user:0});
+  res.render("indexPage",{sucess:0,stream:0,user:0,dbs:0});
 
 }
 

@@ -56,7 +56,11 @@
                
      
                 <p class="text">Title :- <%=tag.name %></p>
+                <p class="text">Created at :- <%=refrence[stream[i].postPreview.postId].createdAt %></p>
+
+
                 <!-- <p class="text">Created at :- <%=refrence[stream[i].postPreview.postId].createdAt %></p> -->
+      
                 <p class="text">Created at :- <%= Date(parseInt(refrence[stream[i].postPreview.postId].createdAt)) %></p>
                 <!-- <p class="text">Reading Time :- <%=Math.ceil(refrence[stream[i].postPreview.postId].virtuals.readingTime)%></p> -->
                 <p class="text">Reading Time :- <%=Math.floor(refrence[stream[i].postPreview.postId].virtuals.readingTime * 100) / 100 %> min </p>
@@ -67,7 +71,12 @@
                 </div>
 
                
+          
+
+
             </div>
+
+
             
             <% } %>
       
@@ -81,6 +90,19 @@
             <% for(var i=0;i<sucess.length;i++){ %>
             <button name = "relatedbtn" value="<%= sucess[i].name %>"><%= sucess[i].name %></button>
             <% } %>
+
+
+            <div class = "historybtn">
+            <h1>History</h1>
+            <% for(var i=0;i<dbs.length;i++){ %>
+               <% if(dbs[i].fname){ %>
+                <button name = "relatedbtn" value="<%= dbs[i].fname %>"><%= dbs[i].fname %> <p><i>Time:-</i> <%= dbs[i].createdAt %></p></button>
+                 <% } else{ %>  
+                  <button name = "relatedbtn" value="<%= dbs[i].relatedbtn %>"><%= dbs[i].relatedbtn %> <p><i>Time:-</i> <%= dbs[i].createdAt %></p></button>
+            <% } %>
+              <% } %>
+            </div>  
+
             </div>
     </div> 
 </form>
