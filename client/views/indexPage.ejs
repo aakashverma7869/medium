@@ -68,7 +68,7 @@
                 <h2 class="title"><%= refrence[stream[i].postPreview.postId].previewContent.bodyModel.paragraphs[1].text %> </h2>
             <% } %>
             <% if(refrence[stream[i].postPreview.postId].previewContent.bodyModel.paragraphs[2]){ %>
-              <p class="text"><%= refrence[stream[i].postPreview.postId].previewContent.bodyModel.paragraphs[2].text %> </p>
+              <p class="text"><%= refrence[stream[i].postPreview.postId].previewContent.bodyModel.paragraphs[2].text %> .....</p>
           <% } %>   
 
 
@@ -76,14 +76,14 @@
         
      
                 <p class="text">Title :- <%=tag.name %></p>
-                <p class="text">Created at :- <%=refrence[stream[i].postPreview.postId].createdAt %></p>
+               
 
 
                 <!-- <p class="text">Created at :- <%=refrence[stream[i].postPreview.postId].createdAt %></p> -->
       
                 <p class="text">Created at :- <%= new Date(parseInt(refrence[stream[i].postPreview.postId].createdAt)) %></p>
                 <!-- <p class="text">Reading Time :- <%=Math.ceil(refrence[stream[i].postPreview.postId].virtuals.readingTime)%></p> -->
-                <p class="text">Reading Time :- <%=Math.floor(refrence[stream[i].postPreview.postId].virtuals.readingTime * 100) / 100 %> min </p>
+              
                 <h2 class="title">POST ID :- <%=stream[i].postPreview.postId %></h2>
                 <h2 class="title">Creator ID :- <%=refrence[stream[i].postPreview.postId].creatorId %></h2>
          
