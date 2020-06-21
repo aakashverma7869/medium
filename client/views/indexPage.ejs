@@ -50,10 +50,30 @@
             <% for(var i=0;i<stream.length;i++){ %>
 
             <div class="blog-post">
-                <h2 class="title">Creator Name :- <%=user[refrence[stream[i].postPreview.postId].creatorId].name %></h2>
-                <h2 class="title">POST ID :- <%=stream[i].postPreview.postId %></h2>
-                <h2 class="title">Creator ID :- <%=refrence[stream[i].postPreview.postId].creatorId %></h2>
+              <h2 class="title">Creator Name :- <%=user[refrence[stream[i].postPreview.postId].creatorId].name %></h2>
+              <p class="text"> <%=Math.floor(refrence[stream[i].postPreview.postId].virtuals.readingTime * 100) / 100 %> min read </p>
+              <div class = "imagec" id = "imge">
+                <!-- <img src="https://miro.medium.com/<%= sucess[1].metadata.coverImage.id %>"/> -->
+             
+                  
+                  <% if(refrence[stream[i].postPreview.postId].previewContent.bodyModel.paragraphs[0].metadata){ %>
+                    <img src="https://miro.medium.com/<%= refrence[stream[i].postPreview.postId].previewContent.bodyModel.paragraphs[0].metadata.id %>"/>
+
+                <% } %>
                
+                
+              </div>
+
+              <% if(refrence[stream[i].postPreview.postId].previewContent.bodyModel.paragraphs[1].text){ %>
+                <h2 class="title"><%= refrence[stream[i].postPreview.postId].previewContent.bodyModel.paragraphs[1].text %> </h2>
+            <% } %>
+            <% if(refrence[stream[i].postPreview.postId].previewContent.bodyModel.paragraphs[2]){ %>
+              <p class="text"><%= refrence[stream[i].postPreview.postId].previewContent.bodyModel.paragraphs[2].text %> </p>
+          <% } %>   
+
+
+            
+        
      
                 <p class="text">Title :- <%=tag.name %></p>
                 <p class="text">Created at :- <%=refrence[stream[i].postPreview.postId].createdAt %></p>
@@ -61,11 +81,19 @@
 
                 <!-- <p class="text">Created at :- <%=refrence[stream[i].postPreview.postId].createdAt %></p> -->
       
-                <p class="text">Created at :- <%= Date(parseInt(refrence[stream[i].postPreview.postId].createdAt)) %></p>
+                <p class="text">Created at :- <%= new Date(parseInt(refrence[stream[i].postPreview.postId].createdAt)) %></p>
                 <!-- <p class="text">Reading Time :- <%=Math.ceil(refrence[stream[i].postPreview.postId].virtuals.readingTime)%></p> -->
                 <p class="text">Reading Time :- <%=Math.floor(refrence[stream[i].postPreview.postId].virtuals.readingTime * 100) / 100 %> min </p>
+                <h2 class="title">POST ID :- <%=stream[i].postPreview.postId %></h2>
+                <h2 class="title">Creator ID :- <%=refrence[stream[i].postPreview.postId].creatorId %></h2>
+         
                 <div class="user-info">
-                    <img src="https://randomuser.me/api/portraits/women/26.jpg" alt="pic" />
+
+
+                    <% if(user[refrence[stream[i].postPreview.postId].creatorId]){ %>
+                      <img src="https://miro.medium.com/<%= user[refrence[stream[i].postPreview.postId].creatorId].imageId %>" alt="pic"/>
+                  <% } %>
+        
                    
                     <span><%=user[refrence[stream[i].postPreview.postId].creatorId].name %></span>
                 </div>
@@ -89,6 +117,7 @@
 
             <% for(var i=0;i<sucess.length;i++){ %>
             <button name = "relatedbtn" value="<%= sucess[i].name %>"><%= sucess[i].name %></button>
+            <!-- <img src="https://miro.medium.com/<%= sucess[i].metadata.coverImage.id %>"/> -->
             <% } %>
 
 
