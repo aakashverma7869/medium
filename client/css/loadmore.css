@@ -1,0 +1,23 @@
+nav{
+    background-color: beige
+  }
+  .nav-class > nav {
+    display: flex;
+    justify-content: center;
+  }
+  .nav-class > nav > .nav-img
+  {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+  }
+  .nav-class > nav > .nav-img > img
+  {
+    width: 100%;
+    height: 100%;
+  }
+  .nav-class > nav > .nav-heading > h1{
+   font-size: 2rem;
+   font-style: italic;
+  }
+  

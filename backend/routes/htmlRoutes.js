@@ -14,5 +14,6 @@ router.route("/refresh").get(getControllers.refresh);
 //Post Controller
 router.route("/indexPage").post(postControllers.indexPage);
 
+router.route("/loadMore/:id/:photoid").get(getControllers.loadMore);
 
 module.exports = router;

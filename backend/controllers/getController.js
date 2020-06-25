@@ -29,7 +29,37 @@ let refresh = (req,res) =>{
 
 }
 
+let loadMore  = async (req, res) =>{
+  const loadMoree = req.body;
+  let url = `https://medium.com/_/api/posts/${req.params.id}`
+
+  console.log("URL IS ------->>>>>",url);
+
+  let content = await fetch(url, {
+    method: "get",
+    headers: {
+      "content-type": "application/json"
+    },
+  });
+  var textContent = await content.text();
+  var objContent = JSON.parse(textContent.slice(16));
+  console.log("hi aakash----------- .... ..>>>>>>>",objContent);
+
+  var obje = { 
+    "sucess":objContent.payload.value.content.bodyModel.paragraphs
+   }
+
+   
+  
+  //console.log("hello aakash ->>",loadMoree);
+  console.log(req.params.id);
+  console.log(req.params.photoid);
+
+  res.render("loadMore",{photo:req.params.photoid,data:obje});
+  }
+
 module.exports = {
     indexPage:indexPage,
-    refresh:refresh
+    refresh:refresh,
+    loadMore:loadMore
 }

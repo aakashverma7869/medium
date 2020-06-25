@@ -79,7 +79,7 @@ body {
   }
   .nav-class > nav > .nav-heading > h1{
    font-size: 2rem;
-   font-style: italic;
+   /* font-style: italic; */
   }
   
 

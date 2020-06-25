@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" type="text/css" href="reset.css">
+    <!-- <link rel="stylesheet" type="text/css" href="reset.css"> -->
     <link rel="stylesheet" type="text/css" href="theme.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
@@ -38,7 +38,7 @@
             <button>Search</button>
           </div>
         
-        
+        </form>
        
 
 
@@ -49,7 +49,8 @@
       
             <% for(var i=0;i<stream.length;i++){ %>
 
-            <div class="blog-post">
+          <a href = "/loadMore/<%=stream[i].postPreview.postId%>/<%= refrence[stream[i].postPreview.postId].previewContent.bodyModel.paragraphs[0].metadata.id %>"> 
+             <div class="blog-post">
               <h2 class="title">Creator Name :- <%=user[refrence[stream[i].postPreview.postId].creatorId].name %></h2>
               <p class="text"> <%=Math.floor(refrence[stream[i].postPreview.postId].virtuals.readingTime * 100) / 100 %> min read </p>
               <div class = "imagec" id = "imge">
@@ -100,18 +101,19 @@
 
                
           
-
+                <!-- <form action="/loadMore" method="POST">
+                  <button id = "refresh" value = "<%=stream[i].postPreview.postId %>">LoadMore</button>
+                  </form> -->
 
             </div>
-
-
+            </a>
             
             <% } %>
-      
+            <form action="/indexPage" method="POST">
             <button id = "nxt">Next</button>
-     
+            </form>
         </div>
-    
+        <form action="/indexPage" method="POST">
         <div class = "related">
             <h1> Related Topics:----</h1>
 
@@ -134,7 +136,7 @@
 
             </div>
     </div> 
-</form>
+  </form>
 
 </body>
 </html>

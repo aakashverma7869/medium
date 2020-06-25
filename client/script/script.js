@@ -23,7 +23,7 @@ window.addEventListener('scroll', () => {
     req.session.destroy(function(err) {
         console.log("session is destroyed");
       })
-
-
 }
-
+function loadmore(data){
+    console.log(data);
+}

@@ -1,9 +1,17 @@
 nav{
   background-color: beige
+  
+}
+h2{
+  font-size: 1rem;
+}
+a{
+  text-decoration: none;
+  color: inherit;
 }
 body {
   height: 100%;
- font-style: italic;
+ /* font-style: italic; */
   display: flex;
    flex-flow: column;
 }
