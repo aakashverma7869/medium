@@ -48,9 +48,12 @@
             <h1>Blog Posts</h1>
       
             <% for(var i=0;i<stream.length;i++){ %>
-
+             
+              <% if(refrence[stream[i].postPreview.postId].previewContent.bodyModel.paragraphs[0].metadata){ %>
           <a href = "/loadMore/<%=stream[i].postPreview.postId%>/<%= refrence[stream[i].postPreview.postId].previewContent.bodyModel.paragraphs[0].metadata.id %>"> 
-             <div class="blog-post">
+            <% } %> 
+            
+            <div class="blog-post">
               <h2 class="title">Creator Name :- <%=user[refrence[stream[i].postPreview.postId].creatorId].name %></h2>
               <p class="text"> <%=Math.floor(refrence[stream[i].postPreview.postId].virtuals.readingTime * 100) / 100 %> min read </p>
               <div class = "imagec" id = "imge">
